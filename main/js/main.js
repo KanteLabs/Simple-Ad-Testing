@@ -6,13 +6,30 @@ window.onload=()=>{
         cache: 'default' 
     }
 
+    var imageIsLoaded = undefined;
     let scrollAmount = window.pageYOffset;
-    console.log(scrollAmount);
+    let slothDiv = document.querySelector('div#islands');
+
     window.onscroll = (ev)=>{
-        console.log(window.innerHeight, window.pageYOffset);
         scrollAmount = window.pageYOffset;
+        if(slothDiv.offsetTop - window.innerHeight < window.pageYOffset){
+            fetchImages()
+        }
     }
+
+    function fetchImages(){
+        console.log('fetching image')
+        if(imageIsLoaded !== undefined){
+            let slothImage = sessionStorage.getItem("sloth-image")
+        }else{
+            fetch("images/eagle.jpg", myInit)
+            .then(res=>{
+                console.log(res);
+                sessionStorage.setItem("sloth-image", res.url)
+                imageIsLoaded = true;
+            })
+            .catch(err=>console.log(err))
+        }
+    }
+
 }
-fetch("images/eagle.jpg", myInit)
-.then(res=>console.log(res))
-.catch(err=>console.log(err))
