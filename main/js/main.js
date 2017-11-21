@@ -7,13 +7,13 @@ window.onload=()=>{
     }
 
     var imageIsLoaded = undefined;
-    let scrollAmount = window.pageYOffset;
     let slothDiv = document.getElementById('islands');
     let mountainsDiv = document.getElementById('mountains');
     let jungleDiv = document.getElementById('jungle');
     let desertsDiv = document.getElementById('deserts');
-    
-    if(slothDiv.offsetTop - window.innerHeight < window.pageYOffset){
+
+    /* If a user refreshes the page while within the specific view height this will load the images */
+    if(slothDiv.offsetTop - window.innerHeight < window.pageYOffset && sessionStorage.imageIsLoaded){
         fetchImages();
     }
 
@@ -28,7 +28,7 @@ window.onload=()=>{
     }
 
     function fetchImages(){
-        if(imageIsLoaded !== undefined){
+        if(sessionStorage.imageIsLoaded !== undefined){
             let slothImage = sessionStorage.getItem("sloth-image");
             let mountainsImage = sessionStorage.getItem("mountains-image");
             let jungleImage = sessionStorage.getItem("jungle-image");
@@ -47,7 +47,8 @@ window.onload=()=>{
                 sessionStorage.setItem("mountains-image", `${res.url}mountains.jpg`)
                 sessionStorage.setItem("jungle-image", `${res.url}jaguar.jpg`)
                 sessionStorage.setItem("deserts-image", `${res.url}fox.png`)
-                imageIsLoaded = true;
+                sessionStorage.setItem("imageIsLoaded", true)
+
                 fetchImages();
             })
             .catch(err=>{
