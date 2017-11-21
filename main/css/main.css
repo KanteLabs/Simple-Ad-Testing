@@ -149,7 +149,7 @@ div.thumbnail p {
     overflow: hidden;
 }
 #mountains{
-    background: url("../../images/mountains.jpg");
+    background: url("../../images/placeholder.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -158,14 +158,14 @@ div.thumbnail p {
     top: -1.7em;
 }
 #jungle{
-    background: url("../../images/jaguar.jpg");
+    background: url("../../images/placeholder.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
 }
 #deserts{
-    background: url("../../images/fox.png");
+    background: url("../../images/placeholder.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
