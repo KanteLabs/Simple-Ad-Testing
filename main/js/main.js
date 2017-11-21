@@ -14,7 +14,7 @@ window.onload=()=>{
     /* If a user refeshes or revist the page this will load already stored images */
     if((slothDiv.offsetTop - window.innerHeight < window.pageYOffset)){
         if(localStorage.getItem("imagesStored") !== undefined && localStorage.getItem("imagesStored")){
-            fetchImages();
+            renderImages();
         }else{
             localStorage.setItem("imagesStored", "false");
             fetchImages();
@@ -38,10 +38,29 @@ window.onload=()=>{
         }
     }
 
-
     function fetchImages(){
+        if(localStorage.getItem("imagesStored") === "false"){
+            // fetches the necessary images, and stores the url in local storage
+            fetch("images/", myInit)
+            .then(res=>{
+                localStorage.setItem("sloth-image", `${res.url}sloth.jpg`)
+                localStorage.setItem("mountains-image", `${res.url}mountains.jpg`)
+                localStorage.setItem("jungle-image", `${res.url}jaguar.jpg`)
+                localStorage.setItem("deserts-image", `${res.url}fox.png`)
+                localStorage.setItem("imagesStored", "true")
+                renderImages();
+            })
+            .catch(err=>{
+                // If there's an error fetching, this function will attempt to fetch the images again
+                console.log(err)
+                fetchImages()
+            })
+        }
+    }
+
+    function renderImages(){
+        // renders the images from local store into the image holders
         if(localStorage.getItem("imagesStored") === "true"){
-            console.log("rendering images")
             let slothImage = localStorage.getItem("sloth-image");
             let mountainsImage = localStorage.getItem("mountains-image");
             let jungleImage = localStorage.getItem("jungle-image");
@@ -51,21 +70,6 @@ window.onload=()=>{
             mountainsDiv.style.backgroundImage = `url(${mountainsImage})`;
             jungleDiv.style.backgroundImage = `url(${jungleImage})`;
             desertsDiv.style.backgroundImage = `url(${desertsImage})`;
-
-        }else{
-            console.log('fetching image')
-            fetch("images/", myInit)
-            .then(res=>{
-                localStorage.setItem("sloth-image", `${res.url}sloth.jpg`)
-                localStorage.setItem("mountains-image", `${res.url}mountains.jpg`)
-                localStorage.setItem("jungle-image", `${res.url}jaguar.jpg`)
-                localStorage.setItem("deserts-image", `${res.url}fox.png`)
-                localStorage.setItem("imagesStored", "true")
-                fetchImages();
-            })
-            .catch(err=>{
-                console.log(err)
-            })
         }
     }
 }
