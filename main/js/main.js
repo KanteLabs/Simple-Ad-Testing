@@ -8,7 +8,7 @@ window.onload=()=>{
 
     var imageIsLoaded = undefined;
     let scrollAmount = window.pageYOffset;
-    let slothDiv = document.querySelector('div#islands');
+    let slothDiv = document.getElementById('islands');
 
     window.onscroll = (ev)=>{
         scrollAmount = window.pageYOffset;
@@ -21,8 +21,9 @@ window.onload=()=>{
         console.log('fetching image')
         if(imageIsLoaded !== undefined){
             let slothImage = sessionStorage.getItem("sloth-image")
+            slothDiv.style.backgroundImage = `url(${slothImage})`;
         }else{
-            fetch("images/eagle.jpg", myInit)
+            fetch("images/sloth.jpg", myInit)
             .then(res=>{
                 console.log(res);
                 sessionStorage.setItem("sloth-image", res.url)
