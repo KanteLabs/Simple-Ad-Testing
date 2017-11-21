@@ -48,7 +48,7 @@ table {
 
  /* **************************************** */
 
-.container{
+.container {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -68,6 +68,18 @@ table {
   .container {
     width: 1170px;
   }
+}
+
+.title {
+    font-size: 44px;
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    letter-spacing: 2px;
+}
+
+.home-image {
+    width: 100%;
 }
 
 div#video {

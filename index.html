@@ -9,58 +9,66 @@
         <script src="main/js/main.js"></script>
     </head>
     <body>
-        <div class="container">
-            <img class="home-image" src="images/title.jpg">
-		</div>
+		<section id="home">
+			<h1 class="title">Welcome to Planet Earth</h1>
+			<div class="container">
+				<img class="home-image" src="images/title.jpg">
+			</div>
+			
+			<div class="caption">
+				<a href="#videolink">Trailer</a>
+			</div>
+		</section>
+
+		<section id="media">
+			<div id="videolink"></div>
+			<div class="video" id="video">
+				<video width="90%" height="100%" controls>
+					<source src="http://asset-manager.bbcchannels.com/v/2e80q.720p.mp4?US" type="video/mp4">
+				</video>
+			</div>
+		</section>
 		
-        <div class="caption">
-            <a href="#videolink">Trailer</a>
-		</div>
-		
-		<div id="videolink"></div>
-        <div class="video" id="video">
-            <video width="90%" height="100%" controls>
-                <source src="http://asset-manager.bbcchannels.com/v/2e80q.720p.mp4?US" type="video/mp4">
-            </video>
-		</div>
-		
-		<div id="gallerylink"></div>
-        <div class="gallery">
-            <ul>
-                <li>
-                    <div class="thumbnail">
-                        <div class="img_holder" id="islands"></div>
-                        <p>For some, remote islands offer sanctuary away from the mainland: the tiny pygmy three-toed sloth only survives because of the peace and safety offered by its Caribbean island home, while seabirds like albatross thrive in predator-free isolation.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="thumbnail">
-                        <div class="img_holder" id="mountains"></div>
-                        <p class="p_mountains">In this episode we climb high into the world’s great mountain ranges. Only a few pioneering animals have what it takes to survive up here, they are amongst the most elusive and mysterious on the planet.</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <div class="thumbnail">
-                        <div class="img_holder" id="jungle"></div>
-                        <p>Jungles are the richest places on Earth. A magical world of surprise, drama and unforgettable wild characters. From the jungles of Brazil, home to caiman hunting jaguars and strange jungle dolphins that swim in the tree tops, to Costa Rica where ninja frogs fight huge wasps, we watch as the animals face life in the most competitive place on Earth.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="thumbnail">
-                        <div class="img_holder" id="deserts"></div>
-                        <p class="p_deserts">In this episode we visit the world’s deserts, a land of extremes that pushes life to the limit. Animals here have developed ingenious ways of dealing with the hostile conditions – giving rise to the most incredible survival stories on Earth.</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="info_section">
-            <div class="blurb">
-                <h1>Discover Planet Earth</h1>
-                <p>Experience the world from the viewpoint of animals themselves. From spellbinding wildlife spectacle to intimate encounters, Planet Earth II takes you closer than ever before. Planet Earth II explores the unique characteristics of Earth's most iconic habitats and the extraordinary ways animals survive within them. New technology has allowed individual stories to be captured in an unparalleled level of detail. From spellbinding wildlife spectacle to intimate encounters, Planet Earth II will take you closer than ever before.</p>
-                <p>November 6, 2016</p>
-            </div>
-        </div>
+		<section id="gallery">
+			<div id="gallerylink"></div>
+			<div class="gallery">
+				<ul>
+					<li>
+						<div class="thumbnail">
+							<div class="img_holder" id="islands"></div>
+							<p>For some, remote islands offer sanctuary away from the mainland: the tiny pygmy three-toed sloth only survives because of the peace and safety offered by its Caribbean island home, while seabirds like albatross thrive in predator-free isolation.</p>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail">
+							<div class="img_holder" id="mountains"></div>
+							<p class="p_mountains">In this episode we climb high into the world’s great mountain ranges. Only a few pioneering animals have what it takes to survive up here, they are amongst the most elusive and mysterious on the planet.</p>
+						</div>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<div class="thumbnail">
+							<div class="img_holder" id="jungle"></div>
+							<p>Jungles are the richest places on Earth. A magical world of surprise, drama and unforgettable wild characters. From the jungles of Brazil, home to caiman hunting jaguars and strange jungle dolphins that swim in the tree tops, to Costa Rica where ninja frogs fight huge wasps, we watch as the animals face life in the most competitive place on Earth.</p>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail">
+							<div class="img_holder" id="deserts"></div>
+							<p class="p_deserts">In this episode we visit the world’s deserts, a land of extremes that pushes life to the limit. Animals here have developed ingenious ways of dealing with the hostile conditions – giving rise to the most incredible survival stories on Earth.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="info_section">
+				<div class="blurb">
+					<h1>Discover Planet Earth</h1>
+					<p>Experience the world from the viewpoint of animals themselves. From spellbinding wildlife spectacle to intimate encounters, Planet Earth II takes you closer than ever before. Planet Earth II explores the unique characteristics of Earth's most iconic habitats and the extraordinary ways animals survive within them. New technology has allowed individual stories to be captured in an unparalleled level of detail. From spellbinding wildlife spectacle to intimate encounters, Planet Earth II will take you closer than ever before.</p>
+					<p>November 6, 2016</p>
+				</div>
+			</div>
+		</section>
+
     </body>
 </html>
