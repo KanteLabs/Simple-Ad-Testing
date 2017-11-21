@@ -1,10 +1,54 @@
-*{
-    box-sizing: border-box;
-    transition: .5s all ease;
-    font-family: 'Cormorant SC', serif;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-.container
-{
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+ /* **************************************** */
+
+.container{
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -24,39 +68,6 @@
   .container {
     width: 1170px;
   }
-}
-body{
-}
-.carousel{
-    display: flex;
-    flex-flow: row nowrap;
-    max-width: 90%;
-    max-height: 720px;
-    overflow: hidden;
-    margin: auto;
-    margin-top: 3em;
-}
-.slides{
-    width: 100%;
-    height: 100%;
-}
-.controls{
-    position: absolute;
-}
-a.back_button, a.forward_button {
-    font-size: 10em;
-    color: rgba(255, 255, 255, 0.2);
-    line-height: 4;
-    cursor: pointer;
-    user-select: none;
-    position: relative;
-}
-
-a.back_button{
-    margin-left: 0.09em;
-}
-a.forward_button {
-    margin-left: 6.8em;
 }
 
 div#video {
@@ -90,9 +101,7 @@ a[href="#videolink"]:hover{
     background: rgba(255, 255, 255, 1);
     transform: scale(0.9, 0.9);
 }
-a.back_button:hover, a.forward_button:hover{
-    color: rgba(255, 255, 255, 1);
-}
+
 .gallery{text-align: center;}
 ul li{list-style: none;max-width: 350px;max-height: 250px;/* text-align: center; */margin: 1em;display: inline-block;}
 ul li .thumbnail{}
