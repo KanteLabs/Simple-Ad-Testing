@@ -12,7 +12,7 @@ window.onload=()=>{
     let jungleDiv = document.getElementById('jungle');
     let desertsDiv = document.getElementById('deserts');
 
-    /* If a user refreshes the page while within the specific view height this will load the images */
+    /* If a user refeshes or revist the page this will load already stored images */
     if(slothDiv.offsetTop - window.innerHeight < window.pageYOffset && sessionStorage.imageIsLoaded){
         fetchImages();
     }
