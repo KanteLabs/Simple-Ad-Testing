@@ -142,7 +142,7 @@ div.thumbnail p {
 }
 
 #islands{
-    
+    background: url("../../images/placeholder.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

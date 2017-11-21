@@ -18,18 +18,20 @@ window.onload=()=>{
     }
 
     function fetchImages(){
-        console.log('fetching image')
         if(imageIsLoaded !== undefined){
-            let slothImage = sessionStorage.getItem("sloth-image")
+            let slothImage = sessionStorage.getItem("sloth-image");
             slothDiv.style.backgroundImage = `url(${slothImage})`;
         }else{
+            console.log('fetching image')
             fetch("images/sloth.jpg", myInit)
             .then(res=>{
-                console.log(res);
                 sessionStorage.setItem("sloth-image", res.url)
                 imageIsLoaded = true;
+                fetchImages();
             })
-            .catch(err=>console.log(err))
+            .catch(err=>{
+                
+            })
         }
     }
 
