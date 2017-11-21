@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+/*This css code is mainly for desktop/laptop version of a navbar, other devices will have a hamburger navbar*/
+.navbar, .navbar-nav{
+	display: inline-block;
+	float: none;
+	background-color: #FEF6EB;	
+	text-align: center;
+}
+.navbar-brand img{
+	width: 8em;
+	margin-top: -.5em;
+}
+li {
+	list-style-type: none;
+	display: inline;		
+}
+ul li a{
+	color: #000;
+	padding: 8px 0px 8px 0px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.2em;
+}
+li a:hover{
+	background-color: #96C0CE;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+.active{
+	background-color: #C25B56;
+	color: white;
+}
+
+/*Standard page styling*/
+body {
+	font-family: 'Poiret One', sans-serif;
+}
+.homeGallery{
+	height: 52em;
+	width: auto;
+	overflow: hidden;
+}
+.homeGallery div div div .carouselPic {
+	height: auto;
+	width: 100%;
+	margin: auto;
+	position: relative;
+}
+.homeGallery2 div div div .carouselPic{
+	height: auto;
+	width: 100%;
+	margin: auto;
+	position: relative;
+}
+.carousel-indicators .active, .carousel-caption{
+	color: grey!important;
+}
+.carousel-caption h1{
+	margin-bottom: 30%;
+}
+
+.thumbnail {
+	overflow: hidden;
+	height: 25em;
+	width: auto;
+}
+.thumbnail img {
+	width: 30em;
+	height: auto;
+}
+/*Media Query for mobile devices; Note that this breaks Bootstraps media query size limit of 766px so that we can set a custom size limit of 1091px*/
+@media (max-width: 1091px){
+	.navbar-header {
+      float: none!important;
+  }
+  .navbar-right {
+      float: right!important;
+  }
+  .navbar-toggle {
+      display: inline-block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: left;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+ 
+}
+@media (max-width: 755px){
+	.navbar-nav>li {
+      float: none;
+  }
+  .homeGallery2 {
+	margin-top: 4em;
+	overflow: hidden;
+	}
+}
+
+
+
+
+
