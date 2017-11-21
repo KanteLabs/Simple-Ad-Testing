@@ -142,14 +142,14 @@ div.thumbnail p {
 }
 
 #islands{
-    background: url("http://img.cinemablend.com/quill/c/0/1/4/7/a/c0147a3b66662a49db403e6d36cf2bef2ce9e1a8.jpg");
+    background: url("../../images/sloth.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
 }
 #mountains{
-    background: url("https://ichef.bbci.co.uk/images/ic/976x549_b/p04fglh7.jpg");
+    background: url("../../images/mountains.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -158,14 +158,14 @@ div.thumbnail p {
     top: -1.7em;
 }
 #jungle{
-    background: url("http://www.telegraph.co.uk/content/dam/tv/2016/11/18/JS113143790-planet-earth-jaguar-large_trans_NvBQzQNjv4Bqeo_i_u9APj8RuoebjoAHt0k9u7HhRJvuo-ZLenGRumA.jpg");
+    background: url("../../images/jaguar.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
 }
 #deserts{
-    background: url("http://cdn.images.express.co.uk/img/dynamic/20/590x/secondary/PLANET-EARTH-2-RED-FOX-717745.png");
+    background: url("../../images/fox.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
